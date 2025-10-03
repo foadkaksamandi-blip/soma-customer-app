@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+    <!-- عنوان برنامه -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="سوما - پرداخت امن"
+        android:textSize="24sp"
+        android:textColor="@color/soma_blue"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- نمایش موجودی -->
+    <TextView
+        android:id="@+id/balanceText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/balance_text"
+        android:textSize="20sp"
+        android:textColor="@color/soma_blue"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        android:background="@drawable/balance_background" />
+
+    <!-- وضعیت اتصال -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/status_disconnected"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:background="#E0E0E0"
+        android:textColor="#666666" />
+
+    <!-- ورودی مبلغ -->
+    <EditText
+        android:id="@+id/amountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/amount_hint"
+        android:inputType="number"
+        android:maxLines="1"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:elevation="2dp" />
+
+    <!-- دکمه اتصال -->
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/connect_button"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/soma_blue"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp" />
+
+    <!-- دکمه پرداخت -->
+    <Button
+        android:id="@+id/payButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_button"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/soma_green"
+        android:enabled="false"
+        android:padding="16dp" />
+
+    <!-- نمایش کد تراکنش -->
+    <TextView
+        android:id="@+id/trxText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:padding="8dp"
+        android:textColor="#666666" />
+
+</LinearLayout>
