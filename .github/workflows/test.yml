@@ -1,22 +1,32 @@
-name: Test Artifacts
+name: Build Soma APK
 
 on: [push]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     
-    - name: Create Test File
-      run: |
-        mkdir -p build/
-        echo "این یک فایل تست برای سوماست" > build/test-file.txt
-        echo "سوما - پرداخت آفلاین امن" > build/app-name.txt
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
         
-    - name: Upload Test Files
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+      
+    - name: Build APK
+      run: |
+        echo "در حال ساخت APK برای سوما..."
+        echo "این یک پیام تست است - APK واقعی نیاز به تنظیمات بیشتر دارد"
+        mkdir -p app/build/outputs/apk/debug/
+        echo "فایل APK آزمایشی سوما" > app/build/outputs/apk/debug/soma-customer-demo.apk
+        
+    - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: soma-test-files
-        path: build/
+        name: soma-customer-apk
+        path: app/build/outputs/apk/debug/
         retention-days: 1
