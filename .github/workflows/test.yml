@@ -1,0 +1,22 @@
+name: Test Artifacts
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Create Test File
+      run: |
+        mkdir -p build/
+        echo "این یک فایل تست برای سوماست" > build/test-file.txt
+        echo "سوما - پرداخت آفلاین امن" > build/app-name.txt
+        
+    - name: Upload Test Files
+      uses: actions/upload-artifact@v4
+      with:
+        name: soma-test-files
+        path: build/
+        retention-days: 1
