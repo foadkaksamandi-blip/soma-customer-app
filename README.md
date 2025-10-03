@@ -25,3 +25,5 @@
 # ساخت مجدد برای تست workflow
 # تست ساخت Artifacts
 # تست نهایی Artifacts
+
+# تست نهایی Artifacts
