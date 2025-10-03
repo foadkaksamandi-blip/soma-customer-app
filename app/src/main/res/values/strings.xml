@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">سوما - خریدار</string>
+    <string name="balance_text">موجودی: %d تومان</string>
+    <string name="status_disconnected">اتصال برقرار نشده</string>
+    <string name="status_connected">اتصال امن برقرار شد</string>
+    <string name="amount_hint">مبلغ را وارد کنید</string>
+    <string name="pay_button">پرداخت با بلوتوث</string>
+    <string name="connect_button">اتصال به فروشنده</string>
+    <string name="payment_success">پرداخت موفق - کد: %s</string>
+    <string name="payment_error">خطا در پرداخت</string>
+    <string name="connection_error">خطا در اتصال</string>
+    <string name="insufficient_balance">موجودی کافی نیست</string>
+    <string name="enter_amount">لطفا مبلغ را وارد کنید</string>
+</resources>
